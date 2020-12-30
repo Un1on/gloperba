@@ -1,0 +1,25 @@
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+  "extends": "eslint:recommended",
+  "globals": {
+		"IScroll": false,
+    "Enabler": false,
+    "studio": false
+  },
+	"rules": {
+		"indent": ["error", 2],
+		"linebreak-style": ["error", "windows"],
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		"no-unused-vars": "off",
+		"no-undef": "warn",
+		"no-console": "off",
+		"no-debugger": "off",
+		"no-irregular-whitespace": "off"
+	}
+}

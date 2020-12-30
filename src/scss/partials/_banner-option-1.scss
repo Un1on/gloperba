@@ -1,0 +1,39 @@
+.isi-container-wrapper {
+  opacity: 0;
+}
+
+.animated-content {
+  overflow: hidden;
+}
+.screen-1 {
+  display: block;
+  img{
+opacity: 0;
+  }
+}
+.screen-2 {
+  display: block;
+  opacity: 0;
+}
+
+.screen-3 {
+  display: block;
+  transform: translateX(100%);
+}
+
+.screen-4 {
+  display: block;
+  transform: translateX(-100%);
+}
+
+.screen-5 {
+  display: block;
+  transform: translateX(-100%);
+
+}
+
+.screen-6 {
+
+  .content {
+  }
+}

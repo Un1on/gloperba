@@ -1,0 +1,170 @@
+@import "../vendor/normalize";
+@import "../modules/all";
+@import "../orientation/vertical";
+@import "../type/standard";
+
+/* Alter variables for one specific banner by redefining them here */
+
+
+@import "../partials/all";
+
+#main-panel.gloperba_300x250 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+
+  // common styles for all 4 banners
+  @import "../partials/banner-option-1";
+
+  .main-content-wrapper {
+    flex-grow: 1;
+    min-width: 1px;
+    width: auto;
+  }
+
+  .isi-container-wrapper {
+    flex-shrink: 0;
+    height: 75px;
+    padding-top: 3px;
+  }
+
+  .isi {
+    padding-left: 14px;
+  }
+
+  .isi-container {
+
+    &::before {
+      height: 25px;
+    }
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  // Screen 1
+  .screen-1 {
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // Screen 2
+  .screen-2 {
+
+    .text {
+      align-items: flex-end;
+      width: 153px;
+      padding-bottom: 17px;
+      margin-right: 6px;
+      margin-left: auto;
+      font-size: 19px;
+      line-height: 22px;
+      letter-spacing: -.2px;
+    }
+  }
+
+  // Screen 3
+  .screen-3 {
+
+    .text {
+      align-items: flex-start;
+      width: 163px;
+      padding-top: 15px;
+      margin-left: 20px;
+      font-size: 21px;
+      line-height: 22px;
+      letter-spacing: -.4px;
+    }
+  }
+
+  // Screen 4
+  .screen-4 {
+
+    .text {
+      align-items: flex-end;
+      width: 139px;
+      margin-left: auto;
+      margin-right: 12px;
+      padding-bottom: 16px;
+      font-size: 22px;
+      line-height: 22px;
+      letter-spacing: -.1px;
+    }
+  }
+
+  // Screen 5
+  .screen-5 {
+
+    .text {
+      width: 210px;
+      margin-left: 24px;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: .1px;
+    }
+  }
+
+  // Screen 6
+  .screen-6 {
+
+    .text {
+      align-items: flex-start;
+      width: 210px;
+      padding-top: 30px;
+      margin-left: 25px;
+      font-size: 22px;
+      line-height: 22px;
+      letter-spacing: -.2px;
+    }
+  }
+
+  // Screen 7
+  .screen-7 {
+
+    .img {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .text {
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      width: 206px;
+      padding-top: 34px;
+      margin-left: 63px;
+      font-size: 19px;
+      line-height: 19px;
+
+      strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 24px;
+        line-height: 22px;
+      }
+    }
+
+    .btn {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-text {
+      display: block;
+      margin-bottom: 13px;
+    }
+  }
+}

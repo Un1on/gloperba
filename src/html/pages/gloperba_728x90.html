@@ -1,0 +1,21 @@
+{% set width = 728 %}
+{% set height = 90 %}
+
+{% set banner = "gloperba_728x90" %}
+{% set isiCode = "TAVA_ITP-20172" %}
+{% block bannerClass %}{% endblock %}
+
+{% from "./links.html" import link, closeLink, enabler %}
+
+{% extends "layout-standard.html" %}
+
+{% block content %}
+
+  {% include './main-content-option-1.html' %}
+  <!--enter page specific content here-->
+
+{% endblock %}
+
+{% block isi %}
+  {% include './isi.html' %}
+{% endblock %}

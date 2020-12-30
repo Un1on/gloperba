@@ -1,0 +1,194 @@
+@import "../vendor/normalize";
+@import "../modules/all";
+@import "../orientation/horizontal";
+@import "../type/standard";
+
+/* Alter variables for one specific banner by redefining them here */
+
+
+@import "../partials/all";
+
+#main-panel.gloperba_728x90 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 728px;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+
+  // common styles for all 4 banners
+  @import "../partials/banner-option-1";
+
+  .main-content-wrapper {
+    flex-grow: 1;
+    min-width: 1px;
+    width: auto;
+  }
+
+  .isi-container-wrapper {
+    flex-shrink: 0;
+    width: 0;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  // Screen 1
+  .screen-1 {
+   display: block;
+    
+    .content {
+      background-image: url(../img/bg.png);
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position-y: -150px;
+   
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+  }
+
+  // Screen 2
+  .screen-2 {
+
+    .content{
+      padding: 5px 15px 10px 15px;
+      background-image: url(../img/bg.png);
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position-y: -150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p{
+        font-size: 12.5px;
+        margin: 0;
+        line-height: 14.58px;
+        &:last-child{
+          margin-top: 10px;
+        }
+      }
+      h2{
+         color: $heading-sec-color;
+         font-size: 16.67px;
+         line-height: 20.83px;
+         margin: 0 0 5px 0;
+      }
+    }
+  }
+
+  // Screen 3
+  .screen-3 {
+
+    .content{
+      //bg via main bgimage+bg+color
+      // background:linear-gradient(0deg, rgba(51, 153, 204, 0.2), rgba(51, 153, 204, 0.2)), url(../img/bg.png);
+      // background-repeat: no-repeat;
+      // background-position-y: -125px;
+      background-image: url(../img/bg-3.png);
+      background-size:cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1{
+        color: $white;
+        font-size: 54.17px;
+        line-height: 47.92px;
+        font-weight: normal;
+        text-shadow: 2px 2px #000000;
+      }
+    }
+  }
+
+  // Screen 4
+  .screen-4 {
+
+    .content{
+      background-image: url(../img/bg-4.png);
+      background-size:cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1{
+        color: $white;
+        font-size: 45.83px;
+        line-height: 39.58px;
+        font-weight: normal;
+        text-shadow: 2px 2px #000000;
+        margin-left: 128px;
+        text-align: center;
+        letter-spacing: -2px;
+        
+      }
+    }
+  }
+
+  // Screen 5
+  .screen-5 {
+
+    .content{
+      background-image: url(../img/bg-5.png);
+      background-size:cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1{
+        color: $white;
+        font-size: 45.83px;
+        line-height: 39.58px;
+        font-weight: normal;
+        text-shadow: 2px 2px #000000;
+        text-align: center;
+        letter-spacing: -2px;
+      
+      }
+    }
+  }
+
+  // Screen 6
+  .screen-6 {
+
+    .content{
+      background-image: url(../img/bg.png);
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position-y: -150px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 296px;
+      img{
+        max-height: 45px;
+
+        margin-bottom: 5px;
+      }
+      .bg-image{
+        position: absolute;
+        left: 0px;
+        height: 90px;
+        max-height: 90px;
+        width: auto;
+        bottom: -5px;
+      }
+      .button{
+        background:$orange;
+        padding: 0 5px 0 5px;
+        font-size: 13.47px;
+        line-height: 29.39px;
+        font-weight: bold;
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}
