@@ -16,6 +16,7 @@
   height: 90px;
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 
   // common styles for all 4 banners
   @import "../partials/banner-option-1";
@@ -28,15 +29,11 @@
 
   .isi-container-wrapper {
     flex-shrink: 0;
-    width: 0;
+    width: 239px;
+    display: none;
   }
 
-  .text {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-
+  
   // Screen 1
   .screen-1 {
    display: block;
@@ -66,6 +63,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      
       p{
         font-size: 12.5px;
         margin: 0;
@@ -91,7 +89,7 @@
       // background:linear-gradient(0deg, rgba(51, 153, 204, 0.2), rgba(51, 153, 204, 0.2)), url(../img/bg.png);
       // background-repeat: no-repeat;
       // background-position-y: -125px;
-      background-image: url(../img/bg-3.png);
+      // background-image: url(../img/bg-3.png);
       background-size:cover;
       background-repeat: no-repeat;
       display: flex;
@@ -161,7 +159,7 @@
       background-image: url(../img/bg.png);
       background-size:cover;
       background-repeat: no-repeat;
-      background-position-y: -150px;
+      background-position-y: -60px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;

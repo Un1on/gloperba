@@ -1,39 +1,70 @@
 .isi-container-wrapper {
-  opacity: 0;
+  transform: translateY(100%);
+}
+
+.screen-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 .animated-content {
   overflow: hidden;
 }
+
 .screen-1 {
   display: block;
-  img{
-opacity: 0;
+
+  img {
+    opacity: 0;
   }
 }
+
 .screen-2 {
   display: block;
-  opacity: 0;
+opacity: 0;
+  .content {
+    // opacity: 0;
+  }
 }
 
 .screen-3 {
-  display: block;
-  transform: translateX(100%);
+  display: none;
+  h1{
+    opacity: 0;
+  }
+  .screen-bg {
+    opacity: 0;
+  }
 }
 
 .screen-4 {
   display: block;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
+  h1{
+    opacity: 0;
+  }
 }
 
 .screen-5 {
   display: block;
-  transform: translateX(-100%);
-
+  transform: translateY(100%);
+  h1{
+    opacity: 0;
+  }
 }
 
 .screen-6 {
+  display: block;
+  opacity: 0;
+  .bg-image{
+    transform: translateY(-150%);
+  }
+  .logo-image, .button{
+    transform: translateX(300%);
 
-  .content {
   }
 }

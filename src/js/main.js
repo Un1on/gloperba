@@ -11,12 +11,12 @@ module.exports = class MainJs {
   // ANIMATION FOR THE FIRST BANNER
   bannerFirstOptionAnimation() {
     const animator = {};
-    const ANIMATION_SPEED = 1000;
+    const ANIMATION_SPEED = 2000;
     const SLIDE_ANIMATION_SPEED = 400;
     const ANIMATION_DELAY = 2000;
-    const ANIMATION_DELAY_SECONDARY = 2800;
-    const ANIMATION_DELAY_TERTIARY = 3500;
-
+    const ANIMATION_DELAY_MEDIUM = 500;
+    const ANIMATION_DELAY_SMALL = 200;
+    const ANIMATION_DELAY_READ = 0;
     // reference variables to DOM elements
     const isi = document.querySelector('.isi-container-wrapper');
     const screen1 = document.querySelector('.screen-1');
@@ -27,78 +27,111 @@ module.exports = class MainJs {
     const screen6 = document.querySelector('.screen-6');
 
     const frame1 = () => {
+    
       helperFunctions.fadeIn(screen1.querySelector('img'), ANIMATION_SPEED, () => {
-        setTimeout(() => {
-          helperFunctions.animate(screen1.querySelector('img'), { opacity: 1 }, ANIMATION_SPEED, 'ease');
-          // helperFunctions.animate(screen1, { opacity: 0 }, ANIMATION_SPEED, 'ease');
+        helperFunctions.fadeOut(screen1.querySelector('img'), ANIMATION_SPEED, () => {
+          setTimeout(() => {
+            helperFunctions.animate(screen1, {
+              opacity: 0
+            }, ANIMATION_SPEED, 'ease');
 
-          frame2();
-        }, 800);
+            frame2();
+          }, ANIMATION_DELAY_SMALL);
+        });
       });
     };
 
     const frame2 = () => {
-      helperFunctions.animate(screen2, { opacity: 1}, SLIDE_ANIMATION_SPEED, 'ease', () => {
+      helperFunctions.fadeIn(screen2, ANIMATION_SPEED, () => {
         setTimeout(() => {
-          helperFunctions.animate(screen2, { transform: 'translateX(-100%)' }, SLIDE_ANIMATION_SPEED, 'ease');
-
-          frame3();
-        }, ANIMATION_DELAY_SECONDARY);
+          helperFunctions.fadeOut(screen2, ANIMATION_SPEED, () => {
+            setTimeout(() => {
+  
+              frame3();
+            }, ANIMATION_DELAY_SMALL);
+          });
+        }, ANIMATION_DELAY_READ);
+      
       });
     };
 
     const frame3 = () => {
-
-      helperFunctions.animate(screen3, { transform: 'translateX(0)' }, SLIDE_ANIMATION_SPEED, 'ease', () => {
-        setTimeout(() => {
-          helperFunctions.animate(screen3, { transform: 'translateX(100%)' }, SLIDE_ANIMATION_SPEED, 'ease');
-
-          frame4();
-        }, ANIMATION_DELAY);
+      helperFunctions.animate(screen3, {display: 'block'}, 0, 'ease');
+      helperFunctions.fadeIn(screen3.querySelector('h1'), SLIDE_ANIMATION_SPEED);
+      helperFunctions.fadeIn(screen3.querySelector('.screen-bg'), 4000, () => {
+      helperFunctions.fadeOut(screen3.querySelector('h1'), SLIDE_ANIMATION_SPEED);
+      setTimeout(() => {
+        helperFunctions.animate(screen3, {display: 'none'}, 0, 'ease');
+        frame4();
+      }, SLIDE_ANIMATION_SPEED + 50);
       });
-      
-
     };
-    
+
     const frame4 = () => {
-      helperFunctions.animate(isi, { width: '239px' }, 0, 'ease');
-      helperFunctions.animate(isi, { opacity: 1 }, 0, 'ease');
-
-      helperFunctions.animate(screen4, { transform: 'translateX(0)' }, SLIDE_ANIMATION_SPEED, 'ease', () => {
+      helperFunctions.animate(isi, {display:'block'}, 0, 'ease');
+      helperFunctions.animate(screen4, {transform: 'translateY(0)'}, SLIDE_ANIMATION_SPEED, 'ease', () => {
         setTimeout(() => {
-          helperFunctions.animate(screen4, { transform: 'translateX(100%)' }, SLIDE_ANIMATION_SPEED, 'ease');
-
-          frame5();
-        }, ANIMATION_DELAY);
+          helperFunctions.fadeIn(screen4.querySelector('h1'), SLIDE_ANIMATION_SPEED);
+          setTimeout(() => {
+          helperFunctions.animate(isi, {transform: 'translateY(0)'}, SLIDE_ANIMATION_SPEED, 'ease');
+         
+          setTimeout(() => {
+            this.isi.init();
+            this.isi.refresh();
+            setTimeout(() => {
+            helperFunctions.fadeOut(screen4.querySelector('h1'), SLIDE_ANIMATION_SPEED);
+          },ANIMATION_DELAY - 400);
+            setTimeout(() => {
+              helperFunctions.animate(screen4, {transform: 'translateY(-100%)'}, SLIDE_ANIMATION_SPEED, 'ease');
+  
+              frame5();
+            }, ANIMATION_DELAY );
+          },ANIMATION_DELAY);
+        }, ANIMATION_DELAY_SMALL);
+        }, ANIMATION_DELAY_SMALL);
       });
     };
 
     const frame5 = () => {
-      helperFunctions.animate(screen5, { transform: 'translateX(0)' }, SLIDE_ANIMATION_SPEED, 'ease', () => {
+      helperFunctions.animate(screen5, {transform: 'translateY(0)'}, SLIDE_ANIMATION_SPEED, 'ease', () => {
+        helperFunctions.fadeIn(screen5.querySelector('h1'), SLIDE_ANIMATION_SPEED);
         setTimeout(() => {
-          helperFunctions.fadeOut(screen5.querySelector('.content'), ANIMATION_SPEED, () => {
+          helperFunctions.animate(screen5.querySelector('h1'), {opacity: 0}, SLIDE_ANIMATION_SPEED, 'ease');
+          helperFunctions.animate(screen5, {transform: 'translateY(100%)'}, SLIDE_ANIMATION_SPEED, 'ease', () => {
+
             frame6();
           });
-        }, ANIMATION_DELAY_TERTIARY);
-      });
-    };
-
-    const frame6 = () => {
-      helperFunctions.fadeIn(screen6, ANIMATION_SPEED, () => {
-        setTimeout(() => {
-          frame1();
-        }, ANIMATION_DELAY - 20);
-
-        setTimeout(() => {
-          helperFunctions.animate(screen5, { transform: 'translateX(-100%)' }, SLIDE_ANIMATION_SPEED, 'ease');
-          helperFunctions.animate(screen6, { transform: 'translateX(-100%)' }, SLIDE_ANIMATION_SPEED, 'ease');
         }, ANIMATION_DELAY);
       });
     };
 
 
 
-    animator.init = function() {
+    const frame6 = () => {
+      helperFunctions.fadeIn(screen6, ANIMATION_DELAY_MEDIUM, () => {
+        setTimeout(() => {
+        helperFunctions.animate(screen6.querySelector('.bg-image'), {transform: 'translateY(0)'}, SLIDE_ANIMATION_SPEED, 'ease');
+        setTimeout(() => {
+          helperFunctions.animate(screen6.querySelector('.logo-image'), {transform: 'translateX(0)'}, SLIDE_ANIMATION_SPEED, 'ease');
+          setTimeout(() => {
+            helperFunctions.animate(screen6.querySelector('.button'), {transform: 'translateX(0)'}, SLIDE_ANIMATION_SPEED, 'ease');
+            helperFunctions.animate(screen1, {opacity: 1}, 0, 'ease');
+            setTimeout(() => {
+              helperFunctions.fadeOut(screen6, 0);
+              helperFunctions.animate(screen6.querySelector('.bg-image'), {transform: 'translateY(-100%)'}, SLIDE_ANIMATION_SPEED, 'ease');
+              helperFunctions.animate(screen6.querySelector('.logo-image'), {transform: 'translateX(250%)'}, SLIDE_ANIMATION_SPEED, 'ease');
+              helperFunctions.animate(screen6.querySelector('.button'), {transform: 'translateX(250%)'}, SLIDE_ANIMATION_SPEED, 'ease');
+              helperFunctions.animate(isi, {display:'none'}, 0, 'ease');
+              frame1();
+          }, ANIMATION_DELAY);
+          }, ANIMATION_DELAY_SMALL);
+        }, ANIMATION_DELAY_SMALL);
+      }, ANIMATION_DELAY_SMALL);
+    }, ANIMATION_DELAY_SMALL);
+  };
+
+
+    animator.init = function () {
       frame1();
     };
 
@@ -106,9 +139,9 @@ module.exports = class MainJs {
   }
 
   // ANIMATION FOR THE SECOND BANNER
-  
+
 
   init() {
-      this.bannerFirstOptionAnimator.init();
+    this.bannerFirstOptionAnimator.init();
   }
 };

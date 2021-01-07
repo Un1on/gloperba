@@ -16,7 +16,9 @@
   height: 250px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
+  
   // common styles for all 4 banners
   @import "../partials/banner-option-1";
 
@@ -28,143 +30,165 @@
 
   .isi-container-wrapper {
     flex-shrink: 0;
-    height: 75px;
-    padding-top: 3px;
+    height: 71px;
+    display: none;
   }
 
-  .isi {
-    padding-left: 14px;
-  }
-
-  .isi-container {
-
-    &::before {
-      height: 25px;
-    }
-  }
-
-  .text {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-
-  // Screen 1
-  .screen-1 {
-
-    .content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-  // Screen 2
-  .screen-2 {
-
-    .text {
-      align-items: flex-end;
-      width: 153px;
-      padding-bottom: 17px;
-      margin-right: 6px;
-      margin-left: auto;
-      font-size: 19px;
-      line-height: 22px;
-      letter-spacing: -.2px;
-    }
-  }
-
-  // Screen 3
-  .screen-3 {
-
-    .text {
-      align-items: flex-start;
-      width: 163px;
-      padding-top: 15px;
-      margin-left: 20px;
-      font-size: 21px;
-      line-height: 22px;
-      letter-spacing: -.4px;
-    }
-  }
-
-  // Screen 4
-  .screen-4 {
-
-    .text {
-      align-items: flex-end;
-      width: 139px;
-      margin-left: auto;
-      margin-right: 12px;
-      padding-bottom: 16px;
-      font-size: 22px;
-      line-height: 22px;
-      letter-spacing: -.1px;
-    }
-  }
-
-  // Screen 5
-  .screen-5 {
-
-    .text {
-      width: 210px;
-      margin-left: 24px;
-      font-size: 18px;
-      line-height: 20px;
-      letter-spacing: .1px;
-    }
-  }
-
-  // Screen 6
-  .screen-6 {
-
-    .text {
-      align-items: flex-start;
-      width: 210px;
-      padding-top: 30px;
-      margin-left: 25px;
-      font-size: 22px;
-      line-height: 22px;
-      letter-spacing: -.2px;
-    }
-  }
-
-  // Screen 7
-  .screen-7 {
-
-    .img {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    .text {
-      align-items: flex-start;
-      justify-content: flex-start;
-      flex-direction: column;
-      width: 206px;
-      padding-top: 34px;
-      margin-left: 63px;
-      font-size: 19px;
-      line-height: 19px;
-
-      strong {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 24px;
-        line-height: 22px;
-      }
-    }
-
-    .btn {
-      display: table;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-text {
+    // Screen 1
+    .screen-1 {
       display: block;
-      margin-bottom: 13px;
-    }
-  }
+       
+       .content {
+         background-image: url(../img/bg.png);
+         background-size:cover;
+         background-repeat: no-repeat;
+      
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         
+       }
+     }
+   
+     // Screen 2
+     .screen-2 {
+   
+       .content{
+         padding: 5px 15px 10px 15px;
+         background-image: url(../img/bg.png);
+         background-size:cover;
+         background-repeat: no-repeat;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         
+         p{
+           font-size: 12.5px;
+           margin: 0;
+           line-height: 14.58px;
+           &:last-child{
+             margin-top: 10px;
+           }
+         }
+         h2{
+            color: $heading-sec-color;
+            font-size: 16.67px;
+            line-height: 20.83px;
+            margin: 0 0 5px 0;
+         }
+       }
+     }
+   
+     // Screen 3
+     .screen-3 {
+   
+       .content{
+         //bg via main bgimage+bg+color
+         // background:linear-gradient(0deg, rgba(51, 153, 204, 0.2), rgba(51, 153, 204, 0.2)), url(../img/bg.png);
+         // background-repeat: no-repeat;
+         // background-position-y: -125px;
+         
+         background-image: url(../img/bg-3.png);
+         background-size:cover;
+         background-repeat: no-repeat;
+         display: flex;
+         text-align: center;
+         align-items: center;
+         justify-content: center;
+         h1{
+           width: 270px;
+           color: $white;
+           font-size: 66.67px;
+           line-height: 58.33px;
+           font-weight: normal;
+           text-shadow: 2px 2px #000000;
+         }
+       }
+     }
+   
+     // Screen 4
+     .screen-4 {
+   
+       .content{
+         background-image: url(../img/bg-4.png);
+         background-size:cover;
+         background-repeat: no-repeat;
+         display: flex;
+         align-items: flex-end;
+         justify-content: center;
+         h1{
+           color: $white;
+           width: 230px;
+           font-size: 45.83px;
+           line-height: 41.67px;
+           font-weight: normal;
+           text-shadow: 2px 2px #000000;
+           text-align: center;
+           letter-spacing: -2px;
+           margin-bottom: 5px;
+         }
+       }
+     }
+   
+     // Screen 5
+     .screen-5 {
+   
+       .content{
+         background-image: url(../img/bg-5.png);
+         background-size:cover;
+         background-repeat: no-repeat;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         h1{
+           color: $white;
+           font-size: 47.92px;
+           line-height: 45.83px;
+           font-weight: normal;
+           text-shadow: 2px 2px #000000;
+           text-align: center;
+           letter-spacing: -2px;
+         
+         }
+       }
+     }
+   
+     // Screen 6
+     .screen-6 {
+   
+       .content{
+         background-image: url(../img/bg.png);
+         background-size:cover;
+         background-repeat: no-repeat;
+         background-position-y: -60px;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: flex-end;
+         padding-left: 131px;
+         img{
+           width: 156px;
+          max-width: 156px;
+         }
+         .bg-image{
+           position: absolute;
+           left: 0px;
+           height: 149px;
+           max-height: 149px;
+           width: auto;
+           bottom: 15px;
+         }
+         .button{
+           background:$orange;
+           padding: 0 18px 0 15px;
+           font-size: 17.89px;
+           line-height: 39.02px;
+           margin-top: 27px;
+           margin-bottom: 18px;
+           font-weight: bold;
+           color: $white;
+           text-decoration: none;
+         }
+       }
+     }
 }
