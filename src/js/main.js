@@ -16,7 +16,7 @@ module.exports = class MainJs {
     const ANIMATION_DELAY = 2000;
     const ANIMATION_DELAY_MEDIUM = 500;
     const ANIMATION_DELAY_SMALL = 200;
-    const ANIMATION_DELAY_READ = 0;
+    const ANIMATION_DELAY_READ = 8000;
     // reference variables to DOM elements
     const isi = document.querySelector('.isi-container-wrapper');
     const screen1 = document.querySelector('.screen-1');
