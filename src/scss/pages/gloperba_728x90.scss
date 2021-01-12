@@ -160,7 +160,6 @@
         text-shadow: 2px 2px #808080;
         text-align: center;
         letter-spacing: -1px;
-      
       }
     }
   }
@@ -169,10 +168,9 @@
   .screen-6 {
 
     .content{
-      background-image: url(../img/bg.png);
+      background: transparent;
       background-size:cover;
       background-repeat: no-repeat;
-      background-position-y: -60px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;

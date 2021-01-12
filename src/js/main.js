@@ -116,6 +116,7 @@ module.exports = class MainJs {
 
 
     const frame6 = () => {
+      helperFunctions.animate(screen6, {background: 'linear-gradient(to bottom, transparent, white), url(img/bg-6-gradient.png)'}, SLIDE_ANIMATION_SPEED, 'ease');
       helperFunctions.fadeIn(screen6, ANIMATION_DELAY_MEDIUM, () => {
         setTimeout(() => {
         helperFunctions.animate(screen6.querySelector('.bg-image'), {transform: 'translateY(0)'}, SLIDE_ANIMATION_SPEED, 'ease');
