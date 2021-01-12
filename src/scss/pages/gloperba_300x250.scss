@@ -33,7 +33,17 @@
     height: 71px;
     display: none;
   }
-
+  .d-block-728x90{
+    display: none;
+  }
+  .d-block-300x250{
+    display: block;
+  }
+  h1{
+    sup{
+    font-size: 28px;
+  }
+  }
     // Screen 1
     .screen-1 {
       display: block;
@@ -54,27 +64,28 @@
      .screen-2 {
    
        .content{
-         padding: 5px 15px 10px 15px;
+         padding: 28px 10px 10px 20px;
          background-image: url(../img/bg.png);
          background-size:cover;
          background-repeat: no-repeat;
          display: flex;
          flex-direction: column;
-         justify-content: center;
          
          p{
-           font-size: 12.5px;
+           font-size: 14.58px;
            margin: 0;
-           line-height: 14.58px;
-           &:last-child{
-             margin-top: 10px;
-           }
+           line-height: 17px;
+           letter-spacing: -0.1px;
+         }
+         .sec-p{
+          letter-spacing: -0.2px;
+          margin-top: 8px;
          }
          h2{
             color: $heading-sec-color;
-            font-size: 16.67px;
+            font-size: 18.75px;
             line-height: 20.83px;
-            margin: 0 0 5px 0;
+            margin: 0 0 8px 0;
          }
        }
      }
@@ -88,7 +99,7 @@
          // background-repeat: no-repeat;
          // background-position-y: -125px;
          
-         background-image: url(../img/bg-3.png);
+        //  background-image: url(../img/bg-3.png);
          background-size:cover;
          background-repeat: no-repeat;
          display: flex;
@@ -101,7 +112,7 @@
            font-size: 66.67px;
            line-height: 58.33px;
            font-weight: normal;
-           text-shadow: 2px 2px #000000;
+           text-shadow: 2px 2px #808080;
          }
        }
      }
@@ -122,7 +133,7 @@
            font-size: 45.83px;
            line-height: 41.67px;
            font-weight: normal;
-           text-shadow: 2px 2px #000000;
+           text-shadow: 2px 2px #808080;
            text-align: center;
            letter-spacing: -2px;
            margin-bottom: 5px;
@@ -145,7 +156,7 @@
            font-size: 47.92px;
            line-height: 45.83px;
            font-weight: normal;
-           text-shadow: 2px 2px #000000;
+           text-shadow: 2px 2px #808080;
            text-align: center;
            letter-spacing: -2px;
          

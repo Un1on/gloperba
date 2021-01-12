@@ -31,9 +31,18 @@
     flex-shrink: 0;
     width: 239px;
     display: none;
+    position: absolute;
+    right: 0;
   }
 
-  
+  h1{
+    sup{
+    font-size: 27px;
+  }
+  }
+  .d-block-300x250{
+    display: none;
+  }
   // Screen 1
   .screen-1 {
    display: block;
@@ -55,28 +64,30 @@
   .screen-2 {
 
     .content{
-      padding: 5px 15px 10px 15px;
+      padding: 8px 15px 10px 15px;
       background-image: url(../img/bg.png);
       background-size:cover;
       background-repeat: no-repeat;
       background-position-y: -150px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+
+      letter-spacing: -.1px;
       
       p{
         font-size: 12.5px;
         margin: 0;
         line-height: 14.58px;
-        &:last-child{
-          margin-top: 10px;
-        }
+        
+      }
+      .mt-8{
+        margin-top: 8px !important;
       }
       h2{
          color: $heading-sec-color;
          font-size: 16.67px;
          line-height: 20.83px;
-         margin: 0 0 5px 0;
+         margin: -5px 0 5px 0;
       }
     }
   }
@@ -100,7 +111,7 @@
         font-size: 54.17px;
         line-height: 47.92px;
         font-weight: normal;
-        text-shadow: 2px 2px #000000;
+        text-shadow: 2px 2px #808080;
       }
     }
   }
@@ -115,15 +126,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-right: 239px;
       h1{
         color: $white;
         font-size: 45.83px;
         line-height: 39.58px;
         font-weight: normal;
-        text-shadow: 2px 2px #000000;
-        margin-left: 128px;
+        text-shadow: 2px 2px #808080;
+        margin-left: 95px;
         text-align: center;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
         
       }
     }
@@ -139,14 +151,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 489px;
       h1{
         color: $white;
         font-size: 45.83px;
         line-height: 39.58px;
         font-weight: normal;
-        text-shadow: 2px 2px #000000;
+        text-shadow: 2px 2px #808080;
         text-align: center;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
       
       }
     }
@@ -165,6 +178,10 @@
       align-items: flex-start;
       justify-content: center;
       padding-left: 296px;
+      width: 489px;
+      position: absolute;
+      left: 0;
+      top: 0;
       img{
         max-height: 45px;
 

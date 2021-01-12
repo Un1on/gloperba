@@ -34,7 +34,37 @@
   }
 
  
-
+  .d-block-300x250{
+    display: none;
+  }
+  .isi{
+    font-size: 9px;
+    padding: 9px 21px 20px 9px;
+    h2{
+      font-size: 11px;
+      line-height: 12px;
+      margin: 0 0 3px 0;
+    }
+    ul li::before{
+      width: 6px;
+    }
+    ul.no-but li::before{
+      width: 0;
+    }
+    small{
+      font-size: 8px;
+      line-height: 1.1;
+    }
+    footer {
+    img{
+      max-width: 36px;
+    }
+    small{
+      font-size: 7px;
+    letter-spacing: -.2px;
+    }
+  }
+  }
   // Screen 1
   .screen-1 {
     display: block;
@@ -55,14 +85,16 @@
    .screen-2 {
  
      .content{
-       padding: 5px 15px 10px 15px;
+       padding: 5px 8px 10px 13px;
        background-image: url(../img/bg.png);
        background-size:cover;
        background-repeat: no-repeat;
        display: flex;
        flex-direction: column;
        justify-content: center;
-       
+       .mt-8{
+         margin-top: 5px;
+       }
        p{
          font-size: 8.33px;
          margin: 0;
@@ -89,7 +121,7 @@
        // background-repeat: no-repeat;
        // background-position-y: -125px;
        
-       background-image: url(../img/bg-3.png);
+      //  background-image: url(../img/bg-3.png);
        background-size:cover;
        background-repeat: no-repeat;
        display: flex;
@@ -102,7 +134,7 @@
          font-size: 43.75px;
          line-height: 37.92 px;
          font-weight: normal;
-         text-shadow: 2px 2px #000000;
+         text-shadow: 2px 2px #808080;
        }
      }
    }
@@ -119,13 +151,13 @@
        justify-content: center;
        h1{
          color: $white;
-         width: 150px;
+         width: 155px;
          font-size: 27.08px;
          line-height: 25px;
          font-weight: normal;
-         text-shadow: 2px 2px #000000;
+         text-shadow: 2px 2px #808080;
          text-align: center;
-         letter-spacing: -2px;
+         letter-spacing: -.2px;
          margin-bottom: 5px;
        }
      }
@@ -146,7 +178,7 @@
          font-size: 29.17px;
          line-height: 27.41px;
          font-weight: normal;
-         text-shadow: 2px 2px #000000;
+         text-shadow: 2px 2px #808080;
          text-align: center;
          letter-spacing: -2px;
         width: 160px;
