@@ -75,15 +75,16 @@ module.exports = class MainJs {
     };
 
     const frame4 = () => {
-      
+      helperFunctions.animate(isi, {display:'block'}, 0, 'ease');
+      helperFunctions.animate(isi, {transform: 'translateY(0)'}, SLIDE_ANIMATION_SPEED, 'ease');
+      this.isi.init();
       helperFunctions.animate(screen4, {transform: 'translateY(0)'}, SLIDE_ANIMATION_SPEED, 'ease', () => {
+        
+        this.isi.refresh();
         setTimeout(() => {
           helperFunctions.fadeIn(screen4.querySelector('h1'), SLIDE_ANIMATION_SPEED);
           setTimeout(() => {
-            helperFunctions.animate(isi, {display:'block'}, 0, 'ease');
-          helperFunctions.animate(isi, {transform: 'translateY(0)'}, SLIDE_ANIMATION_SPEED, 'ease');
-          this.isi.init();
-          this.isi.refresh();
+            
             setTimeout(() => {
             helperFunctions.fadeOut(screen4.querySelector('h1'), SLIDE_ANIMATION_SPEED);
             }, SLIDE_ANIMATION_SPEED);
@@ -116,7 +117,7 @@ module.exports = class MainJs {
 
 
     const frame6 = () => {
-      helperFunctions.animate(screen6, {background: 'linear-gradient(to bottom, transparent, white), url(img/bg-6-gradient.png)'}, SLIDE_ANIMATION_SPEED, 'ease');
+      helperFunctions.animate(screen6, {background: 'linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%)'}, SLIDE_ANIMATION_SPEED, 'ease');
       helperFunctions.fadeIn(screen6, ANIMATION_DELAY_MEDIUM, () => {
         setTimeout(() => {
         helperFunctions.animate(screen6.querySelector('.bg-image'), {transform: 'translateY(0)'}, SLIDE_ANIMATION_SPEED, 'ease');
