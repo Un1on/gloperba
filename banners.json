@@ -11,12 +11,21 @@
   "links": {
     "linkToSite": {
       "displayName": "Gloperba",
-      "href": "http://gloperba.com/"
+      "href": "http://gloperba.com"
     },
-    "linkToHowWorksPatient": {
-      "displayName": "Gloperba",
-      "href": "http://gloperba.com/"
+    "medwatch": {
+      "displayName": "Medwatch",
+      "href": "https://www.fda.gov/medwatch"
+    },
+    "PInfo": {
+      "displayName": "PInfo",
+      "href": "https://www.gloperba.com/downloads/pdf/Gloperba_PI.pdf"
+    },
+    "references": {
+      "displayName": "References",
+      "href": "https://www.accessdata.fda.gov/scripts/cder/ob/index.cfm"
     }
+    
   },
   "banners": {
     "gloperba_728x90": {
